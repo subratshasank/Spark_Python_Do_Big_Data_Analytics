@@ -116,8 +116,8 @@ autoData.reduce(lambda x,y : getMPG(x) + getMPG(y)) \
 #............................................................................
 
 #create a KV RDD of auto Brand and Horsepower
-cylData = autoData.map( lambda x: ( x.split(",")[0], \
-    x.split(",")[7]))
+cylData = autoData.map( lambda x: ( x.split(",")[7], \
+    x.split(",")[0]))
 cylData.take(5)
 cylData.keys().collect()
 
