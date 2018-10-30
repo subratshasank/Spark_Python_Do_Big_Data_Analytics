@@ -9,7 +9,12 @@
 Code Samples : Spark SQL
 -----------------------------------------------------------------------------
 """
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SQLContext
 
+conf = SparkConf().setAppName("building a warehouse")
+sc = SparkContext(conf=conf)
+sqlCtx = SQLContext(sc)
 #............................................................................
 ##   Working with Data Frames
 #............................................................................
